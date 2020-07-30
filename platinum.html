@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fill Details</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>Fill</span> Details</h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        <h2 align="center" style="color: #E5E4E2; text-shadow: 1px 1px 1px black;">Platinum Plan</h2><hr>
+		<br>
+		<h4>Emergency Medical Expenses: <span style="color:black;">Deducible</h4>
+        <h4>Accidental Death: <span style="color: black;">Deducible</h4>
+        <h4>Loss of Checked Baggage : <span style="color: black;">Deducible Per Baggage. Maximum 50% of Sum Insured & Per Article 10% of Sum Insured </h4><hr>
+        
+		<table align="left">
+		   <tr>
+		   <th>Base Premium</th>
+		   <td style="color: black;"><b>₹1777</b></td>
+		   </tr>
+		   <tr>
+		   <th>GST(18%)</th>
+		   <td style="color: black;"><b>₹320</b></td>
+		   </tr>
+		   <tr>
+		   <th>Total</th>
+		   <td style="color: black;"><b>₹2097</b></td>
+		   </tr>
+		</table>
+      </div>
+      <div class="contact">
+        <h3>Proposer Details</h3>
+        <form method="post" id="plat" action="ProposerDetails.php" onsubmit="return validateForm()">
+          <p>
+		    <label><i class="fa fa-user" aria-hidden="true"></i> Name</label>
+            <input type="text" name="name" required>
+          </p>
+          <p>
+            <label><i class="fa fa-calendar" aria-hidden="true"></i> Date of Birth</label>
+            <input type="date" data-date-open-on-focus="true" name="dob" required>
+          </p>
+           <p>
+        <label><i class="fa fa-plane" aria-hidden="true"></i> Departure</label>
+            <input type="text" name="dep" required>
+          </p>
+          <p>
+            <label><i class="fa fa-plane" aria-hidden="true"></i> Destination</label>
+            <input type="text" name="dest" required>
+          </p>
+          <p>
+            <label><i class="fa fa-calendar" aria-hidden="true"></i> Leaving date</label>
+            <input type="date" name="from" required>
+          </p>
+          <p>
+        <label><i class="fa fa-calendar" aria-hidden="true"></i> Arriving date</label>
+            <input type="date" name="till" required>
+          </p>
+          <p>
+            <label><i class="fa fa-envelope" aria-hidden="true"></i> Email Address</label>
+            <input type="email" name="email" required>
+          </p>
+          <p>
+            <label><i class="fa fa-phone" aria-hidden="true"></i> Phone Number</label>
+            <input type="text" name="phone" id="phoneno" required>
+          </p>
+           <p>
+            <label>Pincode</label>
+            <input type="text" name="pincode" id="pin" required>
+          </p>
+		   <p>
+            <label><i class="fa fa-university" aria-hidden="true"></i> State</label>
+            <input type="text" name="state" required>
+          </p>
+		  <p>
+            <label><i class="fa fa-building" aria-hidden="true"></i> City</label>
+            <input type="text" name="city" required>
+          </p>
+		  <p>
+            <label><i class="fa fa-building-o" aria-hidden="true"></i> Residence</label required>
+            <input type="text" name="residence">
+          </p>
+		  <h3>Nominee Details</h3><br>
+      <p>
+            <label><i class="fa fa-user" aria-hidden="true"></i> Name</label>
+            <input type="text" name="name2" required>
+          </p>
+          <p>
+            <label><i class="fa fa-calendar" aria-hidden="true"></i> Date of Birth</label>
+            <input type="date" name="dob2" required>
+          </p>
+      <p>
+            <label><i class="fa fa-address-book" aria-hidden="true"></i> Relation</label>
+            <input type="text" name="nr" required>
+          </p>
+          <p>
+            <label><i class="fa fa-phone" aria-hidden="true"></i> Contact No.</label>
+            <input type="text" name="pno" id="rcont" required>
+          </p>
+      
+    
+      <h3 class="full">Did you have any Medical History in last 5 years or currently suffering from any medical adversites? If Yes,</h3>
+          
+      <p>
+            <label><i class="fa fa-medkit" aria-hidden="true"></i> Type of Medical Problem</label>
+            <input type="text" name="mdp">
+          </p>
+          <p>
+            <label><i class="fa fa-info-circle" aria-hidden="true"></i> Age</label>
+            <input type="text" name="age" id="ag">
+          </p>
+       <p>
+            <label><i class="fa fa-calendar-times-o" aria-hidden="true"></i> Duration</label>
+            <input type="text" name="duration">
+          </p>
+   <p>
+          <h3>Confirm your Plan</h3>
+          <p>
+          <label>Insurance Type</label>
+            <select name="insotype" style="width: 100%; background: white;padding:1em;border:1px solid #c9e6ff;" required>
+              <option hidden disabled selected value> Select an option </option>
+            <option value="platinum">Platinum</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+          </select>
+  </p></p>
+      <p class="full">
+            <button type="submit" name="pd">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    
+ function validateForm(){
+   var y = document.forms["plat"]["phoneno"].value;
+    var x = document.forms["plat"]["rcont"].value;
+    var z = document.forms["plat"]["pin"].value;
+    var a = document.forms["plat"]["ag"].value;
+
+ document.getElementById("phoneno").style.borderColor = '#c9e6ff';
+ document.getElementById("rcont").style.borderColor = '#c9e6ff';  
+ document.getElementById("pin").style.borderColor = '#c9e6ff'; 
+ document.getElementById("ag").style.borderColor = '#c9e6ff';
+
+    if (isNaN(y) || y.length < 10 || y.length > 10) {
+        document.getElementById("phoneno").style.borderColor = 'red';
+      return false;
+      }
+      
+
+      if (isNaN(x) || x.length < 10 || x.length > 10) {
+        document.getElementById("rcont").style.borderColor = 'red';
+      return false;
+      }
+      
+      if (isNaN(z) || z.length < 6 || z.length > 6) {
+        document.getElementById("pin").style.borderColor = 'red';
+      return false;
+      }
+
+      if (isNaN(a) || a < 18) {
+        document.getElementById("ag").style.borderColor = 'red';
+      return false;
+      }
+      
+ }
+</script>
+</body>
+</html>
